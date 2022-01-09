@@ -28,7 +28,7 @@ function BondHeader({ bond, slippage, onSlippageChange }: IBondHeaderProps) {
     let history = useHistory();
 
     useEscape(() => {
-        if (open) handleClose;
+        if (open) handleClose();
         else history.push("/mints");
     });
 

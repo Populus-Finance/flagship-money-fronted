@@ -4,7 +4,7 @@ import Header from "../Header";
 import { Hidden, makeStyles, useMediaQuery } from "@material-ui/core";
 import { DRAWER_WIDTH, TRANSITION_DURATION } from "../../constants/style";
 import MobileDrawer from "../Drawer/mobile-drawer";
-import Drawer from "../Drawer";
+import Sidebar from "../Drawer";
 import { cubesImage } from "src/constants/img";
 import Messages from "../Messages";
 
@@ -60,7 +60,7 @@ function ViewBase({ children }: IViewBaseProps) {
                     <MobileDrawer mobileOpen={mobileOpen} handleDrawerToggle={handleDrawerToggle} />
                 </Hidden>
                 <Hidden smDown>
-                    <Drawer />
+                    <Sidebar />
                 </Hidden>
             </div>
             <div className={`${classes.content} ${isSmallerScreen && classes.contentShift}`}>

@@ -34,13 +34,16 @@ function NavContent() {
         if (currentPath.indexOf("calculator") >= 0 && page === "calculator") {
             return true;
         }
+        if (currentPath.indexOf("flagship-lottery") >= 0 && page === "flagship-lottery") {
+            return true;
+        }
         return false;
     }, []);
 
     return (
         <div className="dapp-sidebar">
             <div className="branding-header">
-                <Link href="https://wonderland.money" target="_blank">
+                <Link  href="https://wonderland.money" target="_blank">
                     <img alt="" src={WonderlandIcon} />
                 </Link>
 
@@ -130,15 +133,15 @@ function NavContent() {
 
                     <Link
                         component={NavLink}
-                        to="/flagship-game-fi"
+                        to="/flagship-lottery"
                         isActive={(match: any, location: any) => {
-                            return checkPage(location, "calculator");
+                            return checkPage(location, "flagship-lottery");
                         }}
                         className={classnames("button-dapp-menu", { active: isActive })}
                     >
                         <div className="dapp-menu-item">
                             <img alt="" src={GlobeIcon} />
-                            <p>Flagship Game-Fi</p>
+                            <p>Flagship Lottery</p>
                         </div>
                     </Link>
                 </div>

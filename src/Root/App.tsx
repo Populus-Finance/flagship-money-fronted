@@ -9,7 +9,7 @@ import { IReduxState } from "../store/slices/state.interface";
 import Loading from "../components/Loader";
 import useBonds from "../hooks/bonds";
 import ViewBase from "../components/ViewBase";
-import { Stake, ChooseBond, Bond, Dashboard, NotFound, Calculator } from "../views";
+import { Stake, ChooseBond, Bond, Dashboard, NotFound, Calculator, FlagshipLottery } from "../views";
 import "./style.scss";
 import useTokens from "../hooks/tokens";
 
@@ -104,6 +104,10 @@ function App() {
 
     if (isAppLoading) return <Loading />;
 
+    /**
+     * I think,
+     * all components under the <ViewBase> are the "children" of ViewBase
+     */
     return (
         <ViewBase>
             <Switch>
@@ -132,6 +136,10 @@ function App() {
 
                 <Route path="/calculator">
                     <Calculator />
+                </Route>
+
+                <Route path="/flagship-lottery">
+                    <FlagshipLottery />
                 </Route>
 
                 <Route component={NotFound} />

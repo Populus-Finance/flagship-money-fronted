@@ -10,7 +10,8 @@ import bond from "../helpers/bond";
 // Smash all the interfaces together to get the BondData Type
 export interface IAllBondData extends Bond, IBondDetails, IUserBondDetails {}
 
-const initialBondArray = allBonds;
+const initialBondArray = allBonds; // export default [mim, wavax, mimTime, avaxTime]; in "../helpers/bond/index.ts"
+
 // Slaps together bond data within the account & bonding states
 function useBonds() {
     const bondLoading = useSelector<IReduxState, boolean>(state => state.bonding.loading);

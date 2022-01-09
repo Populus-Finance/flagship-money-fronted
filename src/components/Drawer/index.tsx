@@ -1,10 +1,10 @@
 import { Drawer } from "@material-ui/core";
-import DrawerContent from "./drawer-content";
+import NavContent from "./drawer-content";
 
 function Sidebar() {
     return (
         <Drawer variant="permanent" anchor="left">
-            <DrawerContent />
+            <NavContent />
         </Drawer>
     );
 }

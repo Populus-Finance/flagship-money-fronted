@@ -92,6 +92,9 @@ export interface IBondDetails {
     maxBondPriceToken: number;
 }
 
+/**
+ * @param bond : a bond among all the bonds of the Dapp
+ */
 export const calcBondDetails = createAsyncThunk("bonding/calcBondDetails", async ({ bond, value, provider, networkID }: ICalcBondDetails, { dispatch }) => {
     if (!value) {
         value = "0";
